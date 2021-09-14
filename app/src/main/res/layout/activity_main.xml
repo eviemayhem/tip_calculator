@@ -29,7 +29,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
+        android:id="@+id/tipPercent"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="66dp"
@@ -41,7 +41,7 @@
         app:suffixText="@string/percent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tipPercent"
+            android:id="@+id/tipPercentEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:enabled="false"
@@ -60,7 +60,7 @@
         android:layout_marginBottom="2dp"
         app:layout_constraintBottom_toTopOf="@+id/decreaseTip"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toTopOf="@+id/tipPercent"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -68,7 +68,8 @@
         android:layout_width="73dp"
         android:layout_height="31dp"
         android:layout_marginEnd="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout2"
+        android:onClick="downBtn"
+        app:layout_constraintBottom_toBottomOf="@+id/tipPercent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/arrow_down_float" />
 
@@ -79,7 +80,7 @@
         android:layout_marginEnd="4dp"
         android:layout_weight="1"
         app:layout_constraintEnd_toStartOf="@+id/increaseTip"
-        app:layout_constraintTop_toTopOf="@+id/textInputLayout2" />
+        app:layout_constraintTop_toTopOf="@+id/tipPercent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout3"
@@ -91,7 +92,7 @@
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/tipPercent"
         app:prefixText="@string/currency_symbol">
 
         <com.google.android.material.textfield.TextInputEditText
